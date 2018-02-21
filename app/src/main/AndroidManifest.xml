@@ -24,7 +24,8 @@
             android:value="ocr" />
 
         <activity android:name=".WithoutPic" />
-        <activity android:name=".WithPic"></activity>
+        <activity android:name=".WithPic" />
+        <activity android:name=".ImgFromGallery"></activity>
     </application>
 
 </manifest>

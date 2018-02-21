@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String TAG = "MA";
 
-    Button bt_withoutPic, bt_withPic;
+    Button bt_withoutPic, bt_withPic, bt_selectImage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bt_withoutPic = findViewById(R.id.bt_WithoutPic);
         bt_withPic = findViewById(R.id.bt_WithPic);
+        bt_selectImage = findViewById(R.id.bt_SelectImage);
 
         bt_withPic.setOnClickListener(this);
         bt_withoutPic.setOnClickListener(this);
-
+        bt_selectImage.setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_WithPic:
                 startActivity(new Intent(MainActivity.this, WithPic.class));
+                break;
+
+            case R.id.bt_SelectImage:
+                startActivity(new Intent(MainActivity.this, ImgFromGallery.class));
                 break;
         }
     }
